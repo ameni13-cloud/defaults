@@ -1,0 +1,8 @@
+---
+
+- include_tasks: install-ubuntu.yml
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == '18'
+
+
+- include_tasks: install-redhat.yml 
+ when: ansible_distribution == 'Suse' or ansible_distribution == 'Red Hat Enterprise Linux'
